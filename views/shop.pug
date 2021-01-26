@@ -1,0 +1,23 @@
+extends layouts/main-layout.pug
+
+block styles
+        link(rel="stylesheet", href="/css/product.css")
+
+block content
+        main
+            if products.length > 0
+                .grid   
+                    each product in products
+                        article.card.product-item
+                            header.card__header
+                                h1.product__title #{product.title}
+                            div.card__image
+                                img(src="https://cdn.elearningindustry.com/wp-content/uploads/2016/05/top-10-books-every-college-student-read-1024x640.jpeg", alt="A book", width="100%", height="100%")
+                            .card__content
+                                h2.product__price $#{product.price }
+                                p.product__description #{ product.desc }
+                            .card__actions 
+                                button.btn Add to Cart
+            else
+                h1  No Product has been added.
+        
