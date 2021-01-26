@@ -1,0 +1,20 @@
+<main>
+    <form class="product-form" action="/admin/products" method="POST">
+        <div class="form-control">
+            <label for="Product Name">Product Name</label>
+            <input type="text" name="productName" id="productName" placeholder="Enter the product name" />
+
+            <label for="Price">Price</label>
+            <input type="number" name="productPrice" placeholder="Product price" id="price">
+
+            <label for="Description">Description</label> 
+            <textarea name="description"></textarea>
+
+            <label for="Image">Photo</label> 
+            <input type="file" name="image" placeholder="" id="photo">
+        </div>
+        
+        <button type="submit">Add Product</button>
+    </form>
+</main>
+

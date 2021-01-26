@@ -1,0 +1,27 @@
+extends layouts/main-layout.pug
+
+block title
+    title #{ pageTitle }
+
+block styles
+    link(rel="stylesheet", href="/css/product.css")
+    link(rel="stylesheet", href="/css/form.css")
+
+block content
+    main
+        form.product-form(action="/admin/products", method="POST")
+            div.form-control
+                label(for="Product Name") Product Name
+                input(type="text", name="productName", placeholder="Enter the product name")#productName
+
+                label(for="Price") Price
+                input(type="number", name="productPrice", placeholder="Product price")#price
+
+                label(for="Description") Description
+                textarea(name="description")
+
+                label(for="Image") Photo
+                input(type="file", name="image", placeholder="")#photo
+            button(type="submit") Add Product
+        
+        
